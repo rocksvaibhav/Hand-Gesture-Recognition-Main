@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hand Gesture Recognition</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <video id="video" autoplay muted playsinline></video>
+  <canvas id="canvas"></canvas>
+  <canvas id="particleCanvas"></canvas>
+
+  <div id="gestureContainer">
+    <div id="gestureEmoji">🤚</div>
+    <div id="gestureText">Waiting for gesture...</div>
+    <div id="gestureStats">
+      Confidence: <span id="gestureConfidence">0.00%</span><br/>
+      👍: 0 | ✌️: 0 | ✋: 0 | 🤟: 0 | 👌: 0 | ✍️: 0 | Unknown: 0
+    </div>
+  </div>
+
+  <button id="toggleCamBtn">Turn Camera Off</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
